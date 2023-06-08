@@ -28,7 +28,7 @@
 version: '3'
 services:
   app:
-    image: 'chishin/nginx-proxy-manager-zh:latest'
+    image: 'chishin/nginx-proxy-manager-zh:release'
     restart: always
     ports:
       - '80:80'
