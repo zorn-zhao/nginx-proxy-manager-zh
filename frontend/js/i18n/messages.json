@@ -580,7 +580,8 @@
       "title": "设置",
       "default-site": "默认站点",
       "default-site-congratulations": "成功页面",
-      "default-site-404": "错误页面",
+      "default-site-404": "错误页面 (404)",
+      "default-site-444": "无响应 (444)",
       "default-site-html": "自定义页面",
       "default-site-redirect": "重定向"
     }
