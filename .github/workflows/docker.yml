@@ -4,6 +4,7 @@ on:
  push:
   branches:
    - 'develop-zh'
+   - 'zh-v[1-9].[0-9]+.[0-9]+'
  release:
    types: [published]
 jobs:
@@ -20,7 +21,7 @@ jobs:
       - name: 添加BuildTag环境变量（push）
         if: ${{ github.event_name == 'push'}}
         run: |
-          echo "BUILD_TAG=-t ${BUILD_IMAGE}:${BUILD_VERSION} -t ${BUILD_IMAGE}:dev" >> $GITHUB_ENV
+          echo "BUILD_TAG=-t ${BUILD_IMAGE}:dev-${BUILD_VERSION} -t ${BUILD_IMAGE}:dev" >> $GITHUB_ENV
       - name: 添加BuildTag环境变量（release）
         if: ${{ github.event_name == 'release'}}
         run: |
