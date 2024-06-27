@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    image: 'chishin/nginx-proxy-manager-zh:latest'
+    restart: always
+    ports:
+      - '30080:80'
+      - '30081:81'
+      - '30443:443'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
